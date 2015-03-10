@@ -28,7 +28,10 @@ var EmployeesCollectionView = Backbone.View.extend({
 			var view = new EmployeeView({model: model})
 			this.$el.append(view.render().el);
 		},this)
-
+		//grab all the time tags
+		//use moment .datetime to grab the attribute
+		//$Time.each. attr("datetime") <-- gives you uformatted date string
+		//pass to .moment("") and put result in the text property of the time tag
 		return this;
 	}
 });

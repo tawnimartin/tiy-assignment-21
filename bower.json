@@ -23,7 +23,8 @@
     "backbone": "~1.1.2",
     "font-awesome": "~4.3.0",
     "handlebars": "~3.0.0",
-    "jquery.serializeJSON": "~2.4.2"
+    "jquery.serializeJSON": "~2.4.2",
+    "moment": "~2.9.0"
   },
   "devDependencies": {
     "mocha": "~2.1.0",
