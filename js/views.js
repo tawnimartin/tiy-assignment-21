@@ -1,4 +1,4 @@
-//handles displaying an individual Employee record
+
 var EmployeeView = Backbone.View.extend({
 	template: JST["employee"],
 	tagName: "tr",
@@ -31,9 +31,7 @@ var EmployeesCollectionView = Backbone.View.extend({
 
 		return this;
 	}
-
-
-})
+});
 
 
 var SidebarView = Backbone.View.extend ({
@@ -62,18 +60,29 @@ var SidebarView = Backbone.View.extend ({
 	},
 
 	render: function() {
-
 		var depts = this.collection.pluck('Dept');
+		var uDepts = _.uniq(depts);
 		this.$el.empty();
-		_.each(_.uniq(depts), function(dept) {
-			var markup = this.template({ Dept: dept });
+		_.each(uDepts, function(dept) {
+			if (dept === "Sales") {
+    		deptIcon = "fa-usd";
+    	} else if (dept === "IT") {
+    		deptIcon = "fa-code"; 
+    	} else if (dept === "Corp") {
+    		deptIcon = "fa-building-o";
+    	} else if (dept === "Exec Officers") {
+    		deptIcon = "fa-pie-chart";
+    	} else {
+    		deptIcon = "fa-user";
+    	}
+			var markup = this.template({ Dept: dept, Icon: deptIcon });
 			this.$el.append(markup);
+			this.$(".cat-text[data-group-name='"+ dept +"']").addClass("on");
 		}, this);
-
 		return this;
 	}
 
-})
+});
 
 var TitlesView = Backbone.View.extend ({
 	tagName: "tr",
@@ -88,5 +97,8 @@ var TitlesView = Backbone.View.extend ({
 		return this;
 	}
 
-
-})
+});
+//
+var getIcon = function() {
+	
+}
