@@ -60,25 +60,14 @@ var SidebarView = Backbone.View.extend ({
 	},
 
 	render: function() {
-		var depts = this.collection.pluck('Dept');
-		var uDepts = _.uniq(depts);
+		var depts = _.uniq(this.collection.pluck('Dept'));
+		var icons = _.uniq(this.collection.pluck('Icon'));
 		this.$el.empty();
-		_.each(uDepts, function(dept) {
-			if (dept === "Sales") {
-    		deptIcon = "fa-usd";
-    	} else if (dept === "IT") {
-    		deptIcon = "fa-code"; 
-    	} else if (dept === "Corp") {
-    		deptIcon = "fa-building-o";
-    	} else if (dept === "Exec Officers") {
-    		deptIcon = "fa-pie-chart";
-    	} else {
-    		deptIcon = "fa-user";
-    	}
-			var markup = this.template({ Dept: dept, Icon: deptIcon });
+		for(var i = 0; i < depts.length; i++){
+    	var markup = this.template({ Dept: depts[i], Icon: icons[i] });
 			this.$el.append(markup);
-			this.$(".cat-text[data-group-name='"+ dept +"']").addClass("on");
-		}, this);
+			this.$(".cat-text[data-group-name='"+ depts[i] +"']").addClass("on");
+		};
 		return this;
 	}
 
@@ -90,6 +79,8 @@ var TitlesView = Backbone.View.extend ({
 	render: function() {
 
 		var headings = this.collection.first().keys();
+		var i = headings.indexOf("Icon");
+		headings.splice(i, 1);
 		_.each(headings, function(key) {
 			this.$el.append($("<th />").text(key));
 		}, this);
@@ -100,5 +91,5 @@ var TitlesView = Backbone.View.extend ({
 });
 //
 var getIcon = function() {
-	
+
 }

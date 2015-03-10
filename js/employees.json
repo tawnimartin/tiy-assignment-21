@@ -3,6 +3,7 @@
   "Role": "Sales Assoc.",
   "Manager": "Martin Mindo",
   "Phone": "555.234.4455",
+  "Icon": "fa-usd",
   "Dept": "Sales",
   "StartDate": "10/10/10"
 },{
@@ -10,6 +11,7 @@
   "Role": "Sales Assoc.",
   "Manager": "Martin Mindo",
   "Phone": "555.234.3289",
+  "Icon": "fa-usd",
   "Dept": "Sales",
   "StartDate": "3/6/12"
 },{
@@ -17,6 +19,7 @@
   "Role": "Sales Manager",
   "Manager": "Sarah Sagan",
   "Phone": "555.224.5623",
+  "Icon": "fa-usd",
   "Dept": "Sales",
   "StartDate": "7/20/11"
 },{
@@ -24,6 +27,7 @@
   "Role": "District Manager",
   "Manager": "Kevin Kagal",
   "Phone": "555.211.5645",
+  "Icon": "fa-building-o",
   "Dept": "Corp",
   "StartDate": "2/1/13"
 },{
@@ -31,6 +35,7 @@
   "Role": "Regional Manager",
   "Manager": "Deborah Dacosta",
   "Phone": "555.504.2203",
+  "Icon": "fa-building-o",
   "Dept": "Corp",
   "StartDate": "4/19/12"
 },{
@@ -38,6 +43,7 @@
   "Role": "CSO",
   "Manager": "Zoey Zapata",
   "Phone": "555.388.0892",
+  "Icon": "fa-pie-chart",
   "Dept": "Exec Officers",
   "StartDate": "5/16/14"
 },{
@@ -45,6 +51,7 @@
   "Role": "CEO",
   "Manager": "Deborah Dacosta",
   "Phone": "555.234.4455",
+  "Icon": "fa-pie-chart",
   "Dept": "Exec Officers",
   "StartDate": "2/10/11"
 },{
@@ -52,6 +59,7 @@
   "Role": "IT Support",
   "Manager": "Jeremiah Jackson",
   "Phone": "555.222.5476",
+  "Icon": "fa-code",
   "Dept": "IT",
   "StartDate": "4/5/10"
 },{
@@ -59,6 +67,7 @@
   "Role": "In House Developer",
   "Manager": "Jeremiah Jackson",
   "Phone": "555.884.4389",
+  "Icon": "fa-code",
   "Dept": "IT",
   "StartDate": "7/3/12"
 },{
@@ -66,6 +75,7 @@
   "Role": "IT Manager",
   "Manager": "Shannon Salazar",
   "Phone": "555.234.3876",
+  "Icon": "fa-code",
   "Dept": "IT",
   "StartDate": "8/1/14"
 },{
@@ -74,5 +84,6 @@
   "Manager": "Zoey Zapata",
   "Phone": "555.334.8756",
   "Dept": "Exec Officers",
+  "Icon": "fa-pie-chart",
   "StartDate": "9/27/10"
 }]
